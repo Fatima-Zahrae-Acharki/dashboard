@@ -19,10 +19,8 @@ return new class extends Migration
             $table->string('logoURL');
             $table->unsignedBigInteger('trainingyears_id');
             $table->foreign('trainingyears_id')->references('id')->on('trainingyears');
-
             $table->unsignedBigInteger('tutor_id');
             $table->foreign('tutor_id')->references('id')->on('tutors')->onUpdate('cascade');
-            
             $table->timestamps();
         });
     }
